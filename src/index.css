@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Lausanne-400";
+    src: url("./assets/fonts/TWKLausanne-400.otf");
+}
+@font-face {
+    font-family: "Museoslab";
+    src: url("./assets/fonts/Museo_Slab_500.otf");
+}
+@font-face {
+    font-family: "Lausane-250";
+    src: url("./assets/fonts/TWKLausanne-250.otf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background: #f7f8f2;
+    color: #0b1e5b;
+    font-family: "Lausanne-400";
+}
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}

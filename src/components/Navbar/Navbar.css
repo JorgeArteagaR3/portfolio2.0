@@ -1,0 +1,32 @@
+.menu {
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+h1 {
+    font-family: "Museoslab";
+}
+.menu span {
+    display: block;
+    width: 100%;
+    height: 20%;
+    border-radius: 5px;
+    transition: all 0.5s;
+    transform-origin: left;
+}
+
+.effect span:first-child {
+    transform: rotate(45deg);
+}
+.effect span:nth-child(2) {
+    opacity: 0;
+}
+.effect span:last-child {
+    transform: rotate(-45deg);
+}
+.links {
+    transition: all 0.5s;
+}
+.inactive {
+    display: none;
+}
