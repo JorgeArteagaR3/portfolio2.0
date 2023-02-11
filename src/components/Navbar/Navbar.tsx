@@ -24,7 +24,10 @@ export const Navbar = () => {
                     }
                 >
                     {navUrls.map((url) => (
-                        <li className="first-letter:uppercase">
+                        <li
+                            key={url}
+                            className="first-letter:uppercase"
+                        >
                             <a
                                 className="text-4xl lg:text-xl"
                                 href={"#" + url}

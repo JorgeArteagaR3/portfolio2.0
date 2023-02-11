@@ -1,38 +1,43 @@
-import { Orb } from "../Orb/Orb";
 import "./Skills.css";
+import { DiReact, DiCss3, DiHtml5 } from "react-icons/di";
+import { SiBootstrap, SiTypescript } from "react-icons/si";
+import { DiSass } from "react-icons/di";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaGitAlt } from "react-icons/fa";
+import { Marquee } from "../Marquee/Marquee";
+import { sortSkills } from "../../utils/sortSkills";
+
+const skills = [
+    { text: "HTML", Icon: DiHtml5, color: "#fc490b" },
+    { text: "CSS", Icon: DiCss3, color: "#264de4" },
+    { text: "Sass", Icon: DiSass, color: "#cf649a" },
+    { text: "Bootstrap", Icon: SiBootstrap, color: "#712cf9" },
+    { text: "JavaScript", Icon: IoLogoJavascript, color: "#fcdc00" },
+    { text: "React", Icon: DiReact, color: "#61dafb" },
+    { text: "Git", Icon: FaGitAlt, color: "#f44d27" },
+    { text: "TypeScript", Icon: SiTypescript, color: "#3178c6" },
+];
+const [sortedSkills, sortedSkillsReversed] = sortSkills(skills);
+
 export const Skills = () => {
-    const technologies = [
-        "Skill 1",
-        "Skill 2",
-        "Skill 3",
-        "Skill 4",
-        "Skill 5",
-        "Skill 6",
-        "Skill 7",
-    ];
     return (
-        <section>
-            <div className="px-8">
+        <section className="overflow-hidden mb-8 ">
+            <div className="px-8 container mx-auto">
                 <h2 className="text-4xl font-['Museoslab'] text-left md:text-5xl 2xl:text-6xl">
                     My Skills
                 </h2>
             </div>
-            <div className="marquee overflow-hidden">
-                <div className="marquee-inner flex">
-                    <div className="marquee__group flex min-w-full">
-                        {technologies.map((tech: string) => (
-                            <Orb tech={tech} />
-                        ))}
-                    </div>
-                    <div
-                        aria-hidden
-                        className="marquee__group flex min-w-full"
-                    >
-                        {technologies.map((tech: string) => (
-                            <Orb tech={tech} />
-                        ))}
-                    </div>
-                </div>
+            <div className="flex flex-col gap-2.5 md:gap-8 h-[250px] md:h-[600px] lg:h-[800px] justify-center">
+                <Marquee
+                    arr={sortedSkills}
+                    className="rotate-[-4deg]"
+                    changeDirection={false}
+                />
+                <Marquee
+                    arr={sortedSkillsReversed}
+                    className="rotate-[-4deg]"
+                    changeDirection={true}
+                />
             </div>
         </section>
     );

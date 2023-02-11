@@ -1,3 +1,4 @@
+import "./Hero.css";
 const Hero = () => {
     return (
         <section className="lg:grid grid-cols-2 lg:place-items-center lg:gap-8 2xl:gap-20 mb-32 px-8">
@@ -14,8 +15,9 @@ const Hero = () => {
                 </p>
             </div>
             <div
-                className="bg-darkpurple text-mybackground px-12 pt-12 pb-12 rounded-[360px] h-[455px] flex flex-col align-center justify-center
-                            md:w-[55%] md:h-[550px] md:rounded-[400px] mx-auto md:px-16 lg:ml-0 lg:h-[600px] lg:w-[90%] xl:w-[70%] 2xl:h-[650px] 2xl:max-w-[480px]"
+                className="hero-box bg-darkpurple text-mybackground px-10  rounded-[360px] h-[455px] flex flex-col align-center justify-center
+                            md:w-[55%] md:h-[550px] md:rounded-[400px] md:px-16 mx-auto xl:w-[70%] 
+                            lg:ml-0 lg:h-[600px] lg:w-[90%] xl:pt-20 xl:px-14 xl:justify-start 2xl:h-[650px] 2xl:max-w-[480px] 2xl:pt-28 xl:px-14"
             >
                 <h2
                     className="text-mygreen text-xl border-b-[3px] border-mygreen border-solid text-left my-4 font-['Museoslab'] font-bold pb-1
@@ -23,12 +25,12 @@ const Hero = () => {
                 >
                     About Me
                 </h2>
-                <p className="text-sm leading-8 md:text-lg text-left md:leading-10">
-                    I'm a self-taught Front-End Developer who is very passionate
-                    about coding. Adept in implementing solutions from
-                    development to deployment with multiple frameworks and
-                    adhering to the most widely used design patterns in the
-                    industry.
+                <p className="text-sm leading-8 md:text-lg 2xl:text-xl 2xl:leading-10 text-left md:leading-10">
+                    I am a motivated self-taught front-end developer with a
+                    strong passion for building visually appealing and
+                    user-friendly websites. With a strong understanding of
+                    responsive design and user experience and am confident in my
+                    ability to bring innovative ideas to life.
                 </p>
             </div>
         </section>

@@ -1,15 +1,3 @@
-.marquee-inner {
-    animation: scroll 10s linear infinite;
-}
 .marquee-inner:hover {
     animation-play-state: paused;
-}
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(calc(-100%));
-    }
 }
