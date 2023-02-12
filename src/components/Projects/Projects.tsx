@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useState, useEffect } from "react";
 import { Project } from "../Project/Project";
 import { Swiper, SwiperSlide } from "swiper/react";

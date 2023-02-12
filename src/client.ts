@@ -1,5 +1,4 @@
 import SanityClient from "@sanity/client";
-
 const sanityClient: any = SanityClient({
     projectId: "v1wg4pul",
     dataset: "production",
