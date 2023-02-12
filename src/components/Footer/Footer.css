@@ -1,0 +1,10 @@
+.social-icon:hover svg {
+    fill: #252234;
+}
+.copy-clipboard span {
+    opacity: 0;
+    transition: 0.3s;
+}
+.copy-clipboard:hover span {
+    opacity: 1;
+}

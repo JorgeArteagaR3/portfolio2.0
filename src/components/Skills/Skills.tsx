@@ -6,6 +6,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { FaGitAlt } from "react-icons/fa";
 import { Marquee } from "../Marquee/Marquee";
 import { sortSkills } from "../../utils/sortSkills";
+import clouds from "../../assets/images/cloudscropped.png";
 
 const skills = [
     { text: "HTML", Icon: DiHtml5, color: "#fc490b" },
@@ -21,9 +22,12 @@ const [sortedSkills, sortedSkillsReversed] = sortSkills(skills);
 
 export const Skills = () => {
     return (
-        <section className="overflow-hidden mb-8 ">
-            <div className="px-8 container mx-auto">
-                <h2 className="text-4xl font-['Museoslab'] text-left md:text-5xl 2xl:text-6xl">
+        <section
+            id="skills"
+            className="overflow-hidden mb-20 md:mb-36 lg:mb-40"
+        >
+            <div className="container mx-auto">
+                <h2 className="px-10 md:px-16 text-4xl font-['Museoslab'] text-left md:text-5xl 2xl:text-6xl">
                     My Skills
                 </h2>
             </div>

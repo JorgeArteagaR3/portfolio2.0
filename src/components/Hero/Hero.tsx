@@ -1,16 +1,16 @@
 import "./Hero.css";
 const Hero = () => {
     return (
-        <section className="lg:grid grid-cols-2 lg:place-items-center lg:gap-8 2xl:gap-20 mb-32 px-8">
-            <div className="mb-5 md:mb-8 lg:text-left lg:justify-self-end">
+        <section className="container mx-auto lg:grid grid-cols-2 lg:place-items-center lg:gap-8 2xl:gap-20 mb-32 lg:mb-40 xl:mb-48 px-8 animate-moveDown">
+            <div className="mb-5 md:mb-8 lg:text-left ">
                 <h1
-                    className="text-4xl mb-3 mx-auto 
-                                md:text-5xl 2xl:text-6xl"
+                    className="text-4xl mx-auto mb-4 
+                                md:text-5xl 2xl:text-6xl text-center"
                 >
                     Hi, I'm
                     <br /> Jorge Arteaga
                 </h1>
-                <p className="text-2xl font-['Lausane-250']">
+                <p className="text-2xl font-['Lausane-250'] text-center">
                     Front End Developer & Industrial Engineer
                 </p>
             </div>

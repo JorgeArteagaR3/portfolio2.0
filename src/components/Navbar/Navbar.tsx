@@ -1,36 +1,45 @@
-import { useState } from "react";
+import { SetStateAction, Dispatch } from "react";
+
 import "./Navbar.css";
-export const Navbar = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+export const Navbar = ({
+    isModalOpen,
+    setIsModalOpen,
+}: {
+    isModalOpen: boolean;
+    setIsModalOpen: Dispatch<SetStateAction<boolean>>;
+}) => {
     const navUrls = ["home", "skills", "projects", "contact"];
 
-    const handleMenuModal = () => {
+    const handleMenuModal = (): void => {
         setIsModalOpen(!isModalOpen);
     };
     return (
         <header
             className={
                 isModalOpen
-                    ? "relative mb-10 px-8 pt-6"
-                    : "relative mb-10 px-8 pt-6"
+                    ? "mb-10 lg:mb-20 px-8 pt-6"
+                    : "animate-moveDown mb-10 lg:mb-20 px-8 pt-6"
             }
         >
             <nav className="h-0 lg:h-auto">
                 <ul
                     className={
                         isModalOpen
-                            ? "links block bg-mybackground opacity-1 flex flex-col gap-6 scale-100 text-center h-screen justify-center overflow-hidden"
+                            ? "absolute links block bg-mybackground opacity-1 flex flex-col gap-6 scale-100 text-center h-screen w-screen justify-center"
                             : "links opacity-0 scale-0 lg:opacity-100 text-center lg:scale-100 lg:block lg:flex lg:justify-center lg:gap-14 "
                     }
                 >
                     {navUrls.map((url) => (
                         <li
                             key={url}
-                            className="first-letter:uppercase"
+                            className="nav-links first-letter:uppercase hover:opacity-90"
                         >
                             <a
                                 className="text-4xl lg:text-xl"
                                 href={"#" + url}
+                                onClick={() => {
+                                    setIsModalOpen(false);
+                                }}
                             >
                                 {url}
                             </a>

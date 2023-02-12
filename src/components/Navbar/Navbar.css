@@ -30,3 +30,24 @@ h1 {
 .inactive {
     display: none;
 }
+.nav-links {
+    position: relative;
+    transition: all 0.4s ease;
+}
+@media (min-width: 1024px) {
+    .nav-links::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background: #0b1e5b;
+        transition: 0.4s ease;
+        bottom: 0;
+        left: 0;
+        transform: scale(0, 1);
+        border-radius: 10px;
+    }
+    .nav-links:hover::after {
+        transform: scale(1, 1);
+    }
+}

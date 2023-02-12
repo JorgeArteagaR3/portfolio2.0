@@ -41,17 +41,20 @@ export const Projects = () => {
     };
 
     return (
-        <section>
-            <div className="px-8 mb-8 container mx-auto">
+        <section
+            id="projects"
+            className="mb-20 md:mb-24 lg:mb-32 xl:mb-40"
+        >
+            <div className="px-10 md:px-16 mb-8 lg:mb-14 container mx-auto">
                 <h2 className="text-4xl font-['Museoslab'] text-left md:text-5xl 2xl:text-6xl">
                     My Projects
                 </h2>
             </div>
-
             <Swiper
                 spaceBetween={200}
                 loop
                 speed={1200}
+                scrollbar={{ draggable: true }}
                 pagination={pagination}
                 modules={[Pagination]}
                 slidesPerView={1}

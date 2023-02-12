@@ -13,7 +13,7 @@ export const Project = ({
             <a
                 href={website}
                 target="_blank"
-                className="w-[190px] h-[220px] md:w-[220px] md:h-[260px] cursor-pointer xl:col-start-1 xl:col-end-2 xl:row-start-1 xl:row-end-2 xl:h-[550px] xl:w-[400px]"
+                className="w-[170px] h-[200px] md:w-[220px] md:h-[260px] cursor-pointer xl:col-start-1 xl:col-end-2 xl:row-start-1 xl:row-end-2 xl:h-[550px] xl:w-[400px]"
             >
                 <img
                     src={mainImage.asset.url}
@@ -24,7 +24,7 @@ export const Project = ({
                 <h3 className="font-['Museoslab'] font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
                     {title}
                 </h3>
-                <div className="bg-mybackground rounded-[244px] py-6 px-12 lg:px-20 flex flex-col items-center justify-center gap-6 h-[175px] xl:h-[250px] w-full max-w-[400px] lg:max-w-[540px]">
+                <div className="bg-mybackground rounded-[244px] py-3 md:py-6 px-12 lg:px-20 flex flex-col items-center justify-center gap-3 md:gap-6 h-[150px] md:h-[175px] xl:h-[250px] w-full max-w-[400px] lg:max-w-[540px]">
                     <p className="text-justify text-left text-sm lg:text-base xl:text-lg 2xl:text-xl">
                         {description}
                     </p>

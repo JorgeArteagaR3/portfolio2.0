@@ -15,6 +15,7 @@ module.exports = {
             animation: {
                 scrollLeft: "scrollLeft 15s linear infinite",
                 scrollRight: "scrollRight 15s linear infinite",
+                moveDown: "moveDown 1s ease-in-out forwards;",
             },
 
             keyframes: {
@@ -26,6 +27,10 @@ module.exports = {
                 scrollRight: {
                     "0%": { right: "0" },
                     "100%": { right: "-100%" },
+                },
+                moveDown: {
+                    "0%": { transform: "translateY(-100px)", opacity: "0" },
+                    "100%": { transform: "translateY(0px)", opacity: "1" },
                 },
             },
         },
