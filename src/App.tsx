@@ -1,10 +1,12 @@
+import React from "react";
 import "./App.css";
 import { Footer } from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import { Navbar } from "./components/Navbar/Navbar";
-import { Projects } from "./components/Projects/Projects";
 import { Skills } from "./components/Skills/Skills";
 import { useState } from "react";
+import Projects from "./components/Projects/Projects";
+
 function App() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     return (

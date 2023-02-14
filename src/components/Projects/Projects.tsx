@@ -7,10 +7,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./Projects.css";
 import sanityClient from "../../client";
-
 import { Project as ProjectType } from "../../types";
 
-export const Projects = () => {
+const Projects = () => {
     const [projects, setProjects] = useState<ProjectType[]>([]);
 
     useEffect(() => {
@@ -90,3 +89,4 @@ export const Projects = () => {
         </section>
     );
 };
+export default Projects;
