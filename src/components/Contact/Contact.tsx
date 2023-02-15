@@ -1,13 +1,23 @@
 import { BsFillPersonFill, BsTelephoneFill } from "react-icons/bs";
 import { IoMail } from "react-icons/io5";
 import { FaRegCopy, FaLinkedinIn, FaGithub, FaWhatsapp } from "react-icons/fa";
-import "./Footer.css";
+import "./Contact.css";
 import clouds from "../../assets/images/cloudscropped.png";
 import { useState } from "react";
 
-const socialMedia = [FaLinkedinIn, FaGithub, FaWhatsapp];
+const socials = [
+    {
+        Icon: FaLinkedinIn,
+        url: "https://www.linkedin.com/in/jorge-arteaga-aranibar-789b28182/",
+    },
+    { Icon: FaGithub, url: "https://github.com/JorgeArteagaR3" },
+    {
+        Icon: FaWhatsapp,
+        url: "https://api.whatsapp.com/send/?phone=51912893054&text&type=phone_number&app_absent=0",
+    },
+];
 
-export const Footer = () => {
+export const Contact = () => {
     const [isCopied, setIsCopied] = useState(false);
     return (
         <footer
@@ -58,15 +68,16 @@ export const Footer = () => {
                         </p>
                     </div>
                     <div className="flex justify-center gap-2 xl:gap-5 lg:flex-col">
-                        {socialMedia.map((Social, index) => (
+                        {socials.map((item, index) => (
                             <a
                                 key={index}
+                                href={item.url}
+                                target="_blank"
                                 className="social-icon border-2 border-[#a4a7ff1f] px-4 py-2 rounded-full hover:bg-mybackground duration-300 cursor-pointer hover:fill-darkpurple"
                             >
-                                <Social
+                                <item.Icon
                                     size={25}
                                     className="duration-300"
-                                    key={index}
                                 />
                             </a>
                         ))}
