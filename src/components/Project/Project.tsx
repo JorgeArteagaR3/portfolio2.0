@@ -17,7 +17,7 @@ export const Project = ({
             >
                 <img
                     src={mainImage.asset.url}
-                    className="h-full w-full lg:hover:scale-105 duration-300 object-cover rounded-[40px] md:rounded-[45px]"
+                    className="h-full w-full lg:hover:scale-105 duration-300 object-cover object-center rounded-[40px] md:rounded-[45px]"
                 />
             </a>
             <div className="flex flex-col gap-6">

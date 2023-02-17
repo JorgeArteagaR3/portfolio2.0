@@ -30,7 +30,8 @@ const Projects = () => {
           }`
             )
             .then((data: ProjectType[]) => {
-                setProjects(data);
+                console.log(data);
+                setProjects(data.reverse());
             });
     }, []);
     const pagination = {
