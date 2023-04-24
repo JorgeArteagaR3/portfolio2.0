@@ -15,8 +15,8 @@ const Hero = () => {
                 </p>
             </div>
             <div
-                className="hero-box bg-darkpurple text-mybackground px-10  rounded-[360px] h-[455px] flex flex-col align-center justify-center
-                            md:w-[55%] md:h-[550px] md:rounded-[400px] md:px-16 mx-auto xl:w-[70%] 
+                className="hero-box bg-darkpurple text-mybackground px-10  rounded-[360px] max-w-[350px] h-[455px] flex flex-col align-center justify-center
+                            md:w-[55%] md:max-w-none md:h-[550px] md:rounded-[400px] md:px-16 mx-auto xl:w-[70%] 
                             lg:ml-0 lg:h-[600px] lg:w-[90%] xl:pt-20 xl:px-14 xl:justify-start 2xl:h-[650px] 2xl:max-w-[480px] 2xl:pt-28 xl:px-14"
             >
                 <h2

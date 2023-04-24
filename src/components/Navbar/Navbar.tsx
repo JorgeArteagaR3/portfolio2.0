@@ -1,5 +1,5 @@
 import { SetStateAction, Dispatch } from "react";
-
+import clsx from "clsx";
 import "./Navbar.css";
 export const Navbar = ({
     isModalOpen,
@@ -14,19 +14,13 @@ export const Navbar = ({
         setIsModalOpen(!isModalOpen);
     };
     return (
-        <header
-            className={
-                isModalOpen
-                    ? "mb-10 lg:mb-20 px-8 pt-6"
-                    : "animate-moveDown mb-10 lg:mb-20 px-8 pt-6"
-            }
-        >
+        <header className={clsx("mb-10 lg:mb-20 px-8 pt-6")}>
             <nav className="h-0 lg:h-auto">
                 <ul
                     className={
                         isModalOpen
-                            ? "absolute links block bg-mybackground opacity-1 flex flex-col gap-6 scale-100 text-center h-screen w-screen justify-center"
-                            : "links opacity-0 scale-0 lg:opacity-100 text-center lg:scale-100 lg:block lg:flex lg:justify-center lg:gap-14 "
+                            ? "absolute left-0 links block bg-mybackground opacity-1 flex flex-col gap-6 scale-100 text-center h-screen w-screen justify-center z-20"
+                            : "links opacity-0 scale-0 lg:opacity-100 text-center lg:scale-100 lg:block lg:flex lg:justify-center lg:gap-14 z-20"
                     }
                 >
                     {navUrls.map((url) => (
