@@ -13,19 +13,19 @@ export const Project = ({
             <a
                 href={website}
                 target="_blank"
-                className="w-[170px] h-[200px] md:w-[220px] md:h-[260px] cursor-pointer xl:col-start-1 xl:col-end-2 xl:row-start-1 xl:row-end-2 xl:h-[550px] xl:w-[400px]"
+                className="w-[170px] md:w-[270px] lg:w-[320px] xl:w-[390px] max-h-[540px] cursor-pointer xl:col-start-1 xl:col-end-2 xl:row-start-1 xl:row-end-2 h-full 2xl:w-[400px]"
             >
                 <img
                     src={mainImage.asset.url}
                     className="h-full w-full lg:hover:scale-105 duration-300 object-cover object-center rounded-[40px] md:rounded-[45px]"
                 />
             </a>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 justify-center items-center">
                 <h3 className="font-['Museoslab'] font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
                     {title}
                 </h3>
                 <div className="bg-mybackground rounded-[244px] py-3 md:py-6 px-12 lg:px-20 flex flex-col items-center justify-center gap-3 md:gap-6 h-[150px] md:h-[175px] xl:h-[250px] w-full max-w-[400px] lg:max-w-[540px]">
-                    <p className="text-justify text-left text-sm lg:text-base xl:text-lg 2xl:text-xl">
+                    <p className="text-left text-sm lg:text-base xl:text-lg 2xl:text-xl">
                         {description}
                     </p>
                     <div className="flex gap-4 justify-center">
@@ -49,7 +49,7 @@ export const Project = ({
                     <h3 className="font-['Museoslab'] font-bold mb-4 md:text-base lg:text-xl xl:text-2xl">
                         Technologies Used
                     </h3>
-                    <ul className="flex justify-center gap-2 text-[#9597f8]">
+                    <ul className="flex justify-center gap-2 text-[#9597f8] flex-wrap">
                         {technologies.map((tech) => {
                             return (
                                 <li

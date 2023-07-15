@@ -4,6 +4,7 @@ import { FaRegCopy, FaLinkedinIn, FaGithub, FaWhatsapp } from "react-icons/fa";
 import "./Contact.css";
 import clouds from "../../assets/images/cloudscropped.png";
 import { useState } from "react";
+import { Section } from "../UI/Section";
 
 const socials = [
     {
@@ -20,10 +21,7 @@ const socials = [
 export const Contact = () => {
     const [isCopied, setIsCopied] = useState(false);
     return (
-        <footer
-            className="md:px-16"
-            id="contact"
-        >
+        <Section id="contact" key={"contact"}>
             <div
                 className="bg-darkpurple text-mybackground p-8 w-11/12 mx-auto h-[450px] lg:h-[550px] max-w-[345px] md:max-w-[800px] lg:max-w-[1000px] flex flex-col items-center justify-center gap-10 lg:gap-16
             rounded-[360px] mb-6 lg:mb-10"
@@ -75,20 +73,13 @@ export const Contact = () => {
                                 target="_blank"
                                 className="social-icon border-2 border-[#a4a7ff1f] px-4 py-2 rounded-full hover:bg-mybackground duration-300 cursor-pointer hover:fill-darkpurple"
                             >
-                                <item.Icon
-                                    size={25}
-                                    className="duration-300"
-                                />
+                                <item.Icon size={25} className="duration-300" />
                             </a>
                         ))}
                     </div>
                 </div>
             </div>
-            <img
-                src={clouds}
-                className="mx-auto w-[70%]"
-                alt="clouds"
-            />
-        </footer>
+            <img src={clouds} className="mx-auto w-[70%]" alt="clouds" />
+        </Section>
     );
 };

@@ -14,15 +14,17 @@ function App() {
             className={
                 isModalOpen
                     ? "app relative w-screen h-screen overflow-hidden"
-                    : "app relative"
+                    : "app relative overflow-hidden"
             }
         >
-            <Navbar
-                isModalOpen={isModalOpen}
-                setIsModalOpen={setIsModalOpen}
-            />
-            <main className="text-center">
+            <div className="h-screen w-screen py-12">
+                <Navbar
+                    isModalOpen={isModalOpen}
+                    setIsModalOpen={setIsModalOpen}
+                />
                 <Hero />
+            </div>
+            <main className="text-center">
                 <Skills />
                 <Projects />
             </main>
