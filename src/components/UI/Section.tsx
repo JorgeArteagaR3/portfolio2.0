@@ -12,7 +12,7 @@ export const Section = ({
     return (
         <section
             id={id}
-            className={clsx("h-screen min-h-screen w-screen py-12", className)}
+            className={clsx("min-h-screen w-screen py-12", className)}
         >
             {children}
         </section>
