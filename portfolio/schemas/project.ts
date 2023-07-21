@@ -42,11 +42,8 @@ export default defineType({
     defineField({
       title: 'Code URL',
       name: 'codeurl',
-      type: 'url',
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ['http', 'https', 'mailto', 'tel'],
-        }),
+      type: 'array',
+      of: [{type: 'string'}],
     }),
   ],
 })
