@@ -40,12 +40,22 @@ export const Project = ({
                         >
                             Visit Site
                         </a>
-                        <button
-                            onClick={() => setIsModalOpen(true)}
-                            className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
-                        >
-                            See Code
-                        </button>
+                        {!(codeurl.length <= 1) ? (
+                            <button
+                                onClick={() => setIsModalOpen(true)}
+                                className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
+                            >
+                                See Code
+                            </button>
+                        ) : (
+                            <a
+                                target="_blank"
+                                href={codeurl[0]}
+                                className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
+                            >
+                                See Code
+                            </a>
+                        )}
                     </div>
                 </div>
                 <div className="mb-6 col-start-2 col-end-2">
@@ -79,13 +89,15 @@ export const Project = ({
                 isOpen={isModalOpen}
             >
                 <a
-                    href=""
+                    href={codeurl[0]}
                     className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
+                    target="_blank"
                 >
                     Frontend
                 </a>
                 <a
-                    href=""
+                    href={codeurl[1]}
+                    target="_blank"
                     className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
                 >
                     Backend

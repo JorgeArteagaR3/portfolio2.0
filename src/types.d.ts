@@ -7,7 +7,7 @@ export interface Technology {
 }
 
 export interface Project {
-    codeurl: string;
+    codeurl: string[];
     description: string;
     mainImage: {
         asset: {
