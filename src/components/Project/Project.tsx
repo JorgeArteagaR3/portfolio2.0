@@ -1,4 +1,7 @@
 import { Project as ProjectType } from "../../types";
+import { useState } from "react";
+import Modal from "react-modal";
+Modal.setAppElement("#root");
 
 export const Project = ({
     codeurl,
@@ -8,6 +11,7 @@ export const Project = ({
     website,
     description,
 }: ProjectType) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <>
             <a
@@ -36,13 +40,12 @@ export const Project = ({
                         >
                             Visit Site
                         </a>
-                        <a
+                        <button
+                            onClick={() => setIsModalOpen(true)}
                             className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
-                            href={codeurl}
-                            target="_blank"
                         >
                             See Code
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div className="mb-6 col-start-2 col-end-2">
@@ -63,6 +66,31 @@ export const Project = ({
                     </ul>
                 </div>
             </div>
+            <Modal
+                overlayClassName={
+                    "top-0 left-0 w-screen h-screen bg-[#0000008c] fixed grid place-items-center left-0 z-20"
+                }
+                shouldCloseOnOverlayClick={true}
+                className="bg-white flex flex-col items-center justify-center gap-2 h-1/3 w-1/3 rounded-3xl"
+                shouldCloseOnEsc
+                onRequestClose={() => {
+                    setIsModalOpen(false);
+                }}
+                isOpen={isModalOpen}
+            >
+                <a
+                    href=""
+                    className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
+                >
+                    Frontend
+                </a>
+                <a
+                    href=""
+                    className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
+                >
+                    Backend
+                </a>
+            </Modal>
         </>
     );
 };
