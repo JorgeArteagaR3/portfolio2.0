@@ -12,6 +12,9 @@ export const Project = ({
     description,
 }: ProjectType) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const [frontendUrl, backendUrl] = codeurl;
+
     return (
         <>
             <a
@@ -40,7 +43,7 @@ export const Project = ({
                         >
                             Visit Site
                         </a>
-                        {!(codeurl.length <= 1) ? (
+                        {backendUrl ? (
                             <button
                                 onClick={() => setIsModalOpen(true)}
                                 className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
@@ -50,7 +53,7 @@ export const Project = ({
                         ) : (
                             <a
                                 target="_blank"
-                                href={codeurl[0]}
+                                href={frontendUrl}
                                 className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
                             >
                                 See Code
@@ -89,14 +92,14 @@ export const Project = ({
                 isOpen={isModalOpen}
             >
                 <a
-                    href={codeurl[0]}
+                    href={frontendUrl}
                     className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
                     target="_blank"
                 >
                     Frontend
                 </a>
                 <a
-                    href={codeurl[1]}
+                    href={backendUrl}
                     target="_blank"
                     className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
                 >

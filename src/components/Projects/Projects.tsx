@@ -45,7 +45,7 @@ const Projects = () => {
                                 description,
                             }) => (
                                 <SwiperSlide
-                                    key={codeurl}
+                                    key={website}
                                     className="h-full relative flex flex-col justify-center items-center gap-6 md:grid md:grid-cols-2 md:place-items-center px-10 md:pb-10 pt-10"
                                 >
                                     <Project
