@@ -17,7 +17,7 @@ function App() {
                     : "app relative overflow-hidden"
             }
         >
-            <div className="h-screen w-screen py-12">
+            <div className="min-h-screen w-screen py-12">
                 <Navbar
                     isModalOpen={isModalOpen}
                     setIsModalOpen={setIsModalOpen}
