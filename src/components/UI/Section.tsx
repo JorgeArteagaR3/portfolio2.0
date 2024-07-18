@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "../../lib/utils";
 
 export const Section = ({
     id,
@@ -12,7 +12,7 @@ export const Section = ({
     return (
         <section
             id={id}
-            className={clsx("min-h-screen w-screen py-12", className)}
+            className={cn("min-h-screen w-screen py-12", className)}
         >
             {children}
         </section>

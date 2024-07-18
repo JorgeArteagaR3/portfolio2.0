@@ -5,6 +5,7 @@ import "./Contact.css";
 import clouds from "../../assets/images/cloudscropped.png";
 import { useState } from "react";
 import { Section } from "../UI/Section";
+import { Meteors } from "../UI/meteors";
 
 const socials = [
     {
@@ -21,11 +22,12 @@ const socials = [
 export const Contact = () => {
     const [isCopied, setIsCopied] = useState(false);
     return (
-        <Section id="contact" key={"contact"}>
+        <Section id="contact" key={"contact"} className="min-h-fit">
             <div
-                className="bg-darkpurple text-mybackground p-8 w-11/12 mx-auto h-[450px] lg:h-[550px] max-w-[345px] md:max-w-[800px] lg:max-w-[1000px] flex flex-col items-center justify-center gap-10 lg:gap-16
+                className="relative overflow-hidden bg-darkpurple text-mybackground p-8 w-11/12 mx-auto h-[450px] lg:h-[550px] max-w-[345px] md:max-w-[800px] lg:max-w-[1000px] flex flex-col items-center justify-center gap-10 lg:gap-16
             rounded-[360px] mb-6 lg:mb-10"
             >
+                <Meteors />
                 <h2 className="text-center font-['Museoslab'] text-mygreen text-2xl md:text-3xl lg:text-5xl">
                     Get In Touch
                 </h2>

@@ -15,7 +15,7 @@ export const Orb = ({ text, Icon, color }: Technology) => {
         >
             <p className="text-sm md:text-base lg:text-lg">{text}</p>
             <Icon
-                className="md:w-[40px] md:h-[40px] lg:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px] xl:w-[70px] xl:h-[70px]"
+                className="md:w-[40px]  md:h-[50px] lg:w-[60px] lg:h-[60px] xl:w-[70px] xl:h-[70px]"
                 size={30}
                 color={colour ? color : ""}
             />

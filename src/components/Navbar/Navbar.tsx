@@ -43,8 +43,8 @@ export const Navbar = ({
                 <button
                     className={
                         isModalOpen
-                            ? "menu flex w-[20px] h-[15px] md:w-[30px] md:h-[22.5px] flex effect z-40 absolute top-[20px] right-[20px]"
-                            : "menu flex w-[20px] h-[15px] md:w-[30px] md:h-[22.5px] flex z-20 lg:invisible absolute top-[20px] right-[20px]"
+                            ? "menu  w-[20px] h-[15px] md:w-[30px] md:h-[22.5px] flex effect z-40 absolute top-[20px] right-[20px]"
+                            : "menu w-[20px] h-[15px] md:w-[30px] md:h-[22.5px] flex z-20 lg:invisible absolute top-[20px] right-[20px]"
                     }
                     onClick={handleMenuModal}
                 >

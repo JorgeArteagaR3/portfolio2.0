@@ -12,7 +12,7 @@ export const Marquee = ({
 }) => {
     return (
         <div
-            className={`marquee h-[80px] md:h-[100px] lg:h-[150px] w-[300vw] md:w-[200vw] lg:w-[170vw] xl:w-[200vw] 2xl:w-[130vw] overflow-hidden relative flex items-center justify-center ${className}`}
+            className={`marquee h-[80px] md:h-[100px] lg:h-[150px] w-[300vw] md:w-[200vw] lg:w-[170vw] xl:w-[200vw] 2xl:w-[130vw] overflow-hidden relative flex items-center justify-center  ${className}`}
         >
             <div
                 className={`marquee-inner absolute flex w-[200%] ${
@@ -31,10 +31,7 @@ export const Marquee = ({
                         />
                     ))}
                 </div>
-                <div
-                    aria-hidden
-                    className="marquee__group flex w-[50%]"
-                >
+                <div aria-hidden className="marquee__group flex w-[50%]">
                     {arr.map((skill) => (
                         <Orb
                             key={skill.text}
