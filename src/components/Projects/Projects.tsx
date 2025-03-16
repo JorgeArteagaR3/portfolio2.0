@@ -9,60 +9,60 @@ import { Section } from "../UI/Section";
 import { useProjects } from "../../hooks/useProjects";
 
 const Projects = () => {
-    const { projects } = useProjects();
+  const { projects } = useProjects();
 
-    const pagination = {
-        clickable: true,
-        renderBullet: function (index: any, className: any) {
-            return '<div class="' + className + '">' + (index + 1) + "</div>";
-        },
-    };
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index: any, className: any) {
+      return '<div class="' + className + '">' + (index + 1) + "</div>";
+    },
+  };
 
-    return (
-        <Section id="projects" key="projects">
-            <h2 className="pl-10 md:pl-16 lg:pl-24 text-4xl font-['Museoslab'] text-left md:text-5xl 2xl:text-6xl mb-12">
-                My Projects
-            </h2>
-            <div className="lg:max-w-[95%] mx-auto bg-lightpurple rounded-[56px] xl:flex relative lg:h-[550px] xl:h-[620px] 2xl:h-[720px] ">
-                <Swiper
-                    spaceBetween={200}
-                    loop
-                    speed={1200}
-                    scrollbar={{ draggable: true }}
-                    pagination={pagination}
-                    modules={[Pagination]}
-                    slidesPerView={1}
-                    className="h-full w-full"
+  return (
+    <Section id="projects" key="projects">
+      <h2 className="pl-10 md:pl-16 lg:pl-24 text-4xl font-['Museoslab'] text-left md:text-5xl 2xl:text-6xl mb-12">
+        My Projects
+      </h2>
+      <div className="z-0 lg:max-w-[95%] mx-auto bg-lightpurple rounded-[56px] xl:flex relative lg:h-[550px] xl:h-[620px] 2xl:h-[720px] ">
+        <Swiper
+          spaceBetween={200}
+          loop
+          speed={1200}
+          scrollbar={{ draggable: true }}
+          pagination={pagination}
+          modules={[Pagination]}
+          slidesPerView={1}
+          className="h-full w-full"
+        >
+          {projects &&
+            projects.map(
+              ({
+                codeurl,
+                mainImage,
+                technologies,
+                title,
+                website,
+                description,
+              }) => (
+                <SwiperSlide
+                  key={website}
+                  className="h-full relative flex flex-col justify-center items-center gap-6 md:grid md:grid-cols-2 md:place-items-center px-10 md:pb-10 pt-10"
                 >
-                    {projects &&
-                        projects.map(
-                            ({
-                                codeurl,
-                                mainImage,
-                                technologies,
-                                title,
-                                website,
-                                description,
-                            }) => (
-                                <SwiperSlide
-                                    key={website}
-                                    className="h-full relative flex flex-col justify-center items-center gap-6 md:grid md:grid-cols-2 md:place-items-center px-10 md:pb-10 pt-10"
-                                >
-                                    <Project
-                                        codeurl={codeurl}
-                                        mainImage={mainImage}
-                                        description={description}
-                                        technologies={technologies}
-                                        title={title}
-                                        website={website}
-                                    />
-                                </SwiperSlide>
-                            )
-                        )}
-                </Swiper>
-                {!projects.length && <Loader />}
-            </div>
-        </Section>
-    );
+                  <Project
+                    codeurl={codeurl}
+                    mainImage={mainImage}
+                    description={description}
+                    technologies={technologies}
+                    title={title}
+                    website={website}
+                  />
+                </SwiperSlide>
+              )
+            )}
+        </Swiper>
+        {!projects.length && <Loader />}
+      </div>
+    </Section>
+  );
 };
 export default Projects;
