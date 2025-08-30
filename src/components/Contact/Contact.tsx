@@ -1,23 +1,23 @@
-import { BsFillPersonFill, BsTelephoneFill } from "react-icons/bs";
-import { IoMail } from "react-icons/io5";
-import { FaRegCopy, FaLinkedinIn, FaGithub, FaWhatsapp } from "react-icons/fa";
-import "./Contact.css";
-import clouds from "../../assets/images/cloudscropped.png";
-import { useState } from "react";
-import { Section } from "../UI/Section";
-import { Meteors } from "../UI/meteors";
-import { FaRegFilePdf } from "react-icons/fa6";
-import Modal from "../modal";
+import { BsFillPersonFill, BsTelephoneFill } from 'react-icons/bs';
+import { IoMail } from 'react-icons/io5';
+import { FaRegCopy, FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa';
+import './Contact.css';
+import clouds from '../../assets/images/cloudscropped.png';
+import { useState } from 'react';
+import { Section } from '../UI/Section';
+import { Meteors } from '../UI/meteors';
+import { FaRegFilePdf } from 'react-icons/fa6';
+import Modal from '../modal';
 
 const socials = [
   {
     Icon: FaLinkedinIn,
-    url: "https://www.linkedin.com/in/jorge-arteaga-aranibar-789b28182/",
+    url: 'https://www.linkedin.com/in/jorgeaaranibar/',
   },
-  { Icon: FaGithub, url: "https://github.com/JorgeArteagaR3" },
+  { Icon: FaGithub, url: 'https://github.com/JorgeArteagaR3' },
   {
     Icon: FaWhatsapp,
-    url: "https://api.whatsapp.com/send/?phone=51912893054&text&type=phone_number&app_absent=0",
+    url: 'https://api.whatsapp.com/send/?phone=51912893054&text&type=phone_number&app_absent=0',
   },
 ];
 
@@ -57,14 +57,14 @@ export const Contact = () => {
                   }}
                   onClick={() => {
                     setIsCopied(true);
-                    navigator.clipboard.writeText("jorge.aranibar26@gmail.com");
+                    navigator.clipboard.writeText('jorge.aranibar26@gmail.com');
                   }}
                 />
                 <span
                   className="after:content-[''] after:absolute after:top-full after:left-2/4 after:ml-[-5px] after:border-[5px] after:boder-solid after:border-[#f7f8f2_transparent_transparent_transparent] 
                                 absolute left-[50%] -translate-x-2/4 mx-auto bottom-[35px] bg-mybackground rounded-full text-center text-primary text-[10px] md:text-xs py-2 w-[85px]"
                 >
-                  {!isCopied ? "Copy this!" : "Copied! "}
+                  {!isCopied ? 'Copy this!' : 'Copied! '}
                 </span>
               </span>
             </p>
