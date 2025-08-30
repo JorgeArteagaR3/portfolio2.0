@@ -1,20 +1,17 @@
-import { Project } from "../Project/Project";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "./Projects.css";
-import Loader from "../Loader/Loader";
-import { Section } from "../UI/Section";
-import { useProjects } from "../../hooks/useProjects";
+import { Project } from '../Project/Project';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import './Projects.css';
+import { Section } from '../UI/Section';
+import { PROJECTS } from '@/constants';
 
 const Projects = () => {
-  const { projects } = useProjects();
-
   const pagination = {
     clickable: true,
     renderBullet: function (index: any, className: any) {
-      return '<div class="' + className + '">' + (index + 1) + "</div>";
+      return '<div class="' + className + '">' + (index + 1) + '</div>';
     },
   };
 
@@ -34,33 +31,23 @@ const Projects = () => {
           slidesPerView={1}
           className="h-full w-full"
         >
-          {projects &&
-            projects.map(
-              ({
-                codeurl,
-                mainImage,
-                technologies,
-                title,
-                website,
-                description,
-              }) => (
-                <SwiperSlide
-                  key={website}
-                  className="h-full relative flex flex-col justify-center items-center gap-6 md:grid md:grid-cols-2 md:place-items-center px-10 md:pb-10 pt-10"
-                >
-                  <Project
-                    codeurl={codeurl}
-                    mainImage={mainImage}
-                    description={description}
-                    technologies={technologies}
-                    title={title}
-                    website={website}
-                  />
-                </SwiperSlide>
-              )
-            )}
+          {PROJECTS.map(
+            ({ mainImage, technologies, title, website, description }) => (
+              <SwiperSlide
+                key={website}
+                className="h-full relative flex flex-col justify-center items-center gap-6 md:grid md:grid-cols-2 md:place-items-center px-10 md:pb-10 pt-10"
+              >
+                <Project
+                  mainImage={mainImage}
+                  description={description}
+                  technologies={technologies}
+                  title={title}
+                  website={website}
+                />
+              </SwiperSlide>
+            )
+          )}
         </Swiper>
-        {!projects.length && <Loader />}
       </div>
     </Section>
   );

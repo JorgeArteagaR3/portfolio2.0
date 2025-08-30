@@ -1,18 +1,15 @@
-import { Project as ProjectType } from "../../types";
-import { useState } from "react";
-import Modal from "react-modal";
-Modal.setAppElement("#root");
+import { Project as ProjectType } from '../../types';
+import { useState } from 'react';
+import Modal from 'react-modal';
+Modal.setAppElement('#root');
 
 export const Project = ({
-  codeurl,
   mainImage,
   technologies,
   title,
   website,
   description,
 }: ProjectType) => {
-  const [frontendUrl, backendUrl] = codeurl;
-
   return (
     <>
       <a
@@ -36,21 +33,11 @@ export const Project = ({
           <div className="flex gap-4 justify-center">
             <a
               href={website}
-              className="bg-lightpurple p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base"
               target="_blank"
+              className="bg-[#e8f2cf] hover:scale-105 duration-300 p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base disabled:cursor-not-allowed"
             >
-              Visit Site
+              View
             </a>
-
-            <button
-              onClick={() => {
-                if (!backendUrl) return;
-              }}
-              disabled
-              className="bg-[#e8f2cf] p-2 md:px-4 lg:px-6 rounded-full text-xs md:text-sm lg:text-base disabled:cursor-not-allowed"
-            >
-              See Code
-            </button>
           </div>
         </div>
         <div className="mb-6 col-start-2 col-end-2">
