@@ -1,5 +1,5 @@
-import { Meteors } from '../UI/meteors';
-import './Hero.css';
+import { Meteors } from "../UI/meteors";
+import "./Hero.css";
 const Hero = () => {
   return (
     <section className="container mx-auto lg:grid grid-cols-2 lg:place-items-center lg:gap-8 2xl:gap-20 lg:mb-40 xl:mb-48 px-8 animate-moveDown">
@@ -12,7 +12,7 @@ const Hero = () => {
           <br /> Jorge Arteaga
         </h1>
         <p className="text-2xl font-['Lausane-250'] text-center">
-          Full-Stack Developer
+          Software Engineer
         </p>
       </div>
       <div

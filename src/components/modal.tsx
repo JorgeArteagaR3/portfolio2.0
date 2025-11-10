@@ -10,11 +10,7 @@ type ModalProps = {
 const CVs = [
   {
     title: "English",
-    url: "https://drive.google.com/file/d/1p_QdKXEr7p5Jy8x3aPRcM2QGsjko5Acp/view?usp=drive_link",
-  },
-  {
-    title: "Spanish",
-    url: "https://drive.google.com/file/d/1FB-91cabt3375NGpZBgY0benBKwk_CfE/view?usp=drive_link",
+    url: "https://drive.google.com/file/d/19RUi0pUnDEHTVj1cdh5E4Gved3dERWQd/view?usp=sharing",
   },
 ];
 export default function Modal({ open, toggleModal, scrollabe }: ModalProps) {
